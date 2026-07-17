@@ -4,14 +4,23 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
-
 body{
-    background:url("../../pictures/wallpaper_login.jpg");
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(10,10,20,.65),
+        rgba(10,10,20,.70)
+    ),
+    url("../../pictures/wallpaper_login.jpg");
+
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    min-height:100vh;
-    overflow-y:auto;
+
+    color:white;
+
+    overflow-x:hidden;
 }
 
 /* ==========================
@@ -100,11 +109,7 @@ body{
     transition:.3s;
 }
 
-.menu li a:hover,
-.menu li.active a{
-    background:rgba(255,255,255,.2);
-    transform:translateX(5px);
-}
+
 
 .menu li a i{
     width:20px;
@@ -124,17 +129,21 @@ body{
 .glass-card{
     width:100%;
 
-    background:rgba(255,255,255,.15);
+    background:rgba(255,255,255,.10);
+
     -webkit-backdrop-filter:blur(20px);
     backdrop-filter:blur(20px);
 
-    border:1px solid rgba(255,255,255,.25);
+    border:1px solid rgba(255,255,255,.20);
 
     border-radius:25px;
 
     padding:30px;
 
-    box-shadow:0 8px 32px rgba(0,0,0,.20);
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.35);
+
+  
 }
 
 .student_h1{
@@ -153,8 +162,8 @@ table.dataTable{
 }
 
 table.dataTable thead th{
-    background:rgba(255,255,255,.18);
-    color:white;
+    background:rgba(255,255,255,.12);
+    color:#fff;
     padding:16px;
     border:none;
 }
@@ -162,16 +171,14 @@ table.dataTable thead th{
 table.dataTable tbody td{
     color:white;
     padding:16px;
-    border-bottom:1px solid rgba(255,255,255,.15);
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 table.dataTable tbody tr{
     background:transparent !important;
 }
 
-table.dataTable tbody tr:hover{
-    background:rgba(255,255,255,.08) !important;
-}
+
 
 /* ==========================
    BUTTONS
@@ -329,4 +336,518 @@ table.dataTable tbody tr:hover{
 
 .student_h1{
     color:white;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modal-content{
+    width:450px;
+    max-width:95%;
+
+    background:rgba(25,25,35,.90);
+
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:35px;
+    border-radius:25px;
+
+    position:relative;
+
+    animation:popupScale .35s ease;
+}
+
+.modal-content h2{
+    color:#D4AF37;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.modal-content input,
+.modal-content select{
+    width:100%;
+    padding:14px 18px;
+    margin-bottom:15px;
+
+    border:none;
+    outline:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.12);
+    color:white;
+
+    font-size:15px;
+}
+
+.modal-content input::placeholder{
+    color:rgba(255,255,255,.55);
+}
+
+.modal-content select option{
+    color:black;
+}
+
+.modal-content button{
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:15px;
+
+    background:linear-gradient(
+        135deg,
+        #7B1113,
+        #A51C30
+    );
+
+    color:white;
+
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.modal-content button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(123,17,19,.45);
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.edit-btn{
+    background:#3498db;
+    color:white;
+    border:none;
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =========================
+   PAGE FADE IN
+========================= */
+
+body{
+    animation: pageFade 1s ease;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   SIDEBAR SLIDE IN
+========================= */
+
+.sidebar{
+    animation: slideSidebar .8s ease;
+}
+
+@keyframes slideSidebar{
+    from{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   MAIN CONTENT ANIMATION
+========================= */
+
+.main{
+    animation: slideMain 1s ease;
+}
+
+@keyframes slideMain{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   GLASS CARD FLOAT
+========================= */
+
+.glass-card{
+    animation: glassAppear 1s ease;
+}
+
+@keyframes glassAppear{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   INPUT HOVER EFFECT
+========================= */
+
+.input-group input,
+.input-group select{
+    transition:.35s ease;
+}
+
+.input-group input:hover,
+.input-group select:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.18);
+}
+
+
+/* =========================
+   BUTTON GLOW EFFECT
+========================= */
+
+.register-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.register-btn::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transition:.7s;
+}
+
+.register-btn:hover::before{
+    left:100%;
+}
+
+
+/* =========================
+   LOGO FLOATING EFFECT
+========================= */
+
+.logo-img{
+    animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+
+/* =========================
+   POPUP ANIMATION
+========================= */
+
+.popup{
+    animation:popupFade .4s ease;
+}
+
+@keyframes popupFade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+.popup-card{
+    animation:popupScale .4s ease;
+}
+
+@keyframes popupScale{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   QR CODE ANIMATION
+========================= */
+
+.qr-box img{
+    animation:qrAppear .8s ease;
+}
+
+@keyframes qrAppear{
+    from{
+        transform:scale(.5) rotate(-15deg);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+.glass-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.30);
+
+    transition:.4s ease;
+}
+
+
+/* =========================
+   MENU ITEM ANIMATION
+========================= */
+
+.menu li{
+    animation:menuSlide .6s ease backwards;
+}
+
+.menu li:nth-child(1){animation-delay:.1s;}
+.menu li:nth-child(2){animation-delay:.2s;}
+.menu li:nth-child(3){animation-delay:.3s;}
+.menu li:nth-child(4){animation-delay:.4s;}
+.menu li:nth-child(5){animation-delay:.5s;}
+.menu li:nth-child(6){animation-delay:.6s;}
+.menu li:nth-child(7){animation-delay:.7s;}
+.menu li:nth-child(8){animation-delay:.8s;}
+.menu li:nth-child(9){animation-delay:.9s;}
+
+@keyframes menuSlide{
+    from{
+        transform:translateX(-30px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   QR BOX GLOW EFFECT
+========================= */
+
+.qr-box{
+    animation: qrGlow 2s infinite alternate;
+}
+
+@keyframes qrGlow{
+    from{
+        box-shadow:
+            0 0 10px rgba(123,17,19,.2);
+    }
+
+    to{
+        box-shadow:
+            0 0 25px rgba(123,17,19,.6);
+    }
+}
+
+.view-qr{
+    border:none;
+    background:#2ecc71;
+    color:white;
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.view-qr:hover{
+    transform:scale(1.05);
+}
+
+.modal{
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.7);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.qr-modal{
+    width:420px;
+
+    background:rgba(25,25,35,.90);
+
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    text-align:center;
+
+    animation:popupScale .35s ease;
+}
+
+.qr-modal h2{
+    color:#D4AF37;
+}
+
+.qr-modal h3,
+.qr-modal p{
+    color:white;
+}
+
+/* Modal Dropdown Styling */
+
+.modal-content select{
+    width: 100%;
+
+    padding: 14px 18px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+
+    background: rgba(255,255,255,0.12);
+    color: #333;
+
+    border: 1px solid rgba(128,0,0,0.2);
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+/* Focus Effect */
+
+.modal-content select:focus{
+    border-color: #800000;
+
+    box-shadow:
+        0 0 12px rgba(128,0,0,.25);
+}
+
+/* Dropdown options */
+
+.modal-content select option{
+    background: white;
+    color: #333;
+    padding: 10px;
+}
+
+/* Custom Arrow */
+
+.modal-select{
+    position: relative;
+}
+
+.modal-select::after{
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+
+    position: absolute;
+    right: 18px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #800000;
+    pointer-events: none;
 }

@@ -249,17 +249,366 @@ body{
     border-radius: 100px;
 }
 
-.success-message{
-    background:#00e676;
-    color:white;
 
-    padding:15px;
-    border-radius:15px;
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 
-    margin-bottom:20px;
+    background: rgba(0,0,0,.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
 }
 
+.popup-card{
+    width: 420px;
+    background: white;
+
+    padding: 30px;
+    border-radius: 20px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-card h2{
+    color: #800000;
+    margin-bottom: 10px;
+}
+
+.popup-card p{
+    margin: 8px 0;
+    color: #800000;
+}
+
+.qr-box{
+    width: 220px;
+    height: 220px;
+
+    margin: 20px auto;
+
+    border: 2px dashed #333;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    background: #fff;
+}
+
+.qr-box img{
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: auto;
+}
+
+.popup-card button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    margin: 10px;
+
+    background: #800000;
+    color: white;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.popup-card button:hover{
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+/* =========================
+   PAGE FADE IN
+========================= */
+
+body{
+    animation: pageFade 1s ease;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   SIDEBAR SLIDE IN
+========================= */
+
+.sidebar{
+    animation: slideSidebar .8s ease;
+}
+
+@keyframes slideSidebar{
+    from{
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   MAIN CONTENT ANIMATION
+========================= */
+
+.main{
+    animation: slideMain 1s ease;
+}
+
+@keyframes slideMain{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   GLASS CARD FLOAT
+========================= */
+
+.glass-card{
+    animation: glassAppear 1s ease;
+}
+
+@keyframes glassAppear{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   INPUT HOVER EFFECT
+========================= */
+
+.input-group input,
+.input-group select{
+    transition:.35s ease;
+}
+
+.input-group input:hover,
+.input-group select:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.18);
+}
+
+
+/* =========================
+   BUTTON GLOW EFFECT
+========================= */
+
+.register-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.register-btn::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transition:.7s;
+}
+
+.register-btn:hover::before{
+    left:100%;
+}
+
+
+/* =========================
+   LOGO FLOATING EFFECT
+========================= */
+
 .logo-img{
-    background-color: white;
-    border-radius: 100px;
+    animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+
+/* =========================
+   POPUP ANIMATION
+========================= */
+
+.popup{
+    animation:popupFade .4s ease;
+}
+
+@keyframes popupFade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+.popup-card{
+    animation:popupScale .4s ease;
+}
+
+@keyframes popupScale{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   QR CODE ANIMATION
+========================= */
+
+.qr-box img{
+    animation:qrAppear .8s ease;
+}
+
+@keyframes qrAppear{
+    from{
+        transform:scale(.5) rotate(-15deg);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   CARD HOVER EFFECT
+========================= */
+
+.glass-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.30);
+
+    transition:.4s ease;
+}
+
+
+/* =========================
+   MENU ITEM ANIMATION
+========================= */
+
+.menu li{
+    animation:menuSlide .6s ease backwards;
+}
+
+.menu li:nth-child(1){animation-delay:.1s;}
+.menu li:nth-child(2){animation-delay:.2s;}
+.menu li:nth-child(3){animation-delay:.3s;}
+.menu li:nth-child(4){animation-delay:.4s;}
+.menu li:nth-child(5){animation-delay:.5s;}
+.menu li:nth-child(6){animation-delay:.6s;}
+.menu li:nth-child(7){animation-delay:.7s;}
+.menu li:nth-child(8){animation-delay:.8s;}
+.menu li:nth-child(9){animation-delay:.9s;}
+
+@keyframes menuSlide{
+    from{
+        transform:translateX(-30px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   QR BOX GLOW EFFECT
+========================= */
+
+.qr-box{
+    animation: qrGlow 2s infinite alternate;
+}
+
+@keyframes qrGlow{
+    from{
+        box-shadow:
+            0 0 10px rgba(123,17,19,.2);
+    }
+
+    to{
+        box-shadow:
+            0 0 25px rgba(123,17,19,.6);
+    }
 }

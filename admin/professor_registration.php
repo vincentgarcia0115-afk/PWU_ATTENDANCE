@@ -5,7 +5,7 @@ $conn = new mysqli(
     "localhost",
     "root",
     "",
-    "pwu_attendance"
+    "qr_attendance"
 );
 
 if ($conn->connect_error) {
