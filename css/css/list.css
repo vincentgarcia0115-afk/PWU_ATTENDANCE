@@ -1,0 +1,332 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:url("../../pictures/wallpaper_login.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+    overflow-y:auto;
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+    width:290px;
+    min-width:290px;
+    min-height:100vh;
+
+    background:rgba(255,255,255,.15);
+    -webkit-backdrop-filter:blur(25px);
+    backdrop-filter:blur(25px);
+
+    border-right:1px solid rgba(255,255,255,.25);
+
+    padding:30px 20px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.logo img{
+    width:80px;
+    margin-bottom:10px;
+}
+
+.logo h2{
+    color:white;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#D4AF37;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu{
+    list-style:none;
+}
+
+.menu-title{
+    color:rgba(255,255,255,.6);
+    font-size:12px;
+    letter-spacing:2px;
+    margin-top:25px;
+    margin-bottom:10px;
+    padding-left:10px;
+    text-transform:uppercase;
+}
+
+.menu li{
+    margin-bottom:10px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:14px 18px;
+
+    text-decoration:none;
+    color:white;
+
+    border-radius:15px;
+
+    transition:.3s;
+}
+
+.menu li a:hover,
+.menu li.active a{
+    background:rgba(255,255,255,.2);
+    transform:translateX(5px);
+}
+
+.menu li a i{
+    width:20px;
+    text-align:center;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.main-content{
+    flex:1;
+    padding:30px;
+    overflow-x:auto;
+}
+
+.glass-card{
+    width:100%;
+
+    background:rgba(255,255,255,.15);
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:0 8px 32px rgba(0,0,0,.20);
+}
+
+.student_h1{
+    color:white;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+/* ==========================
+   TABLE
+========================== */
+
+table.dataTable{
+    width:100% !important;
+    border-collapse:collapse !important;
+}
+
+table.dataTable thead th{
+    background:rgba(255,255,255,.18);
+    color:white;
+    padding:16px;
+    border:none;
+}
+
+table.dataTable tbody td{
+    color:white;
+    padding:16px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+table.dataTable tbody tr{
+    background:transparent !important;
+}
+
+table.dataTable tbody tr:hover{
+    background:rgba(255,255,255,.08) !important;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.edit,
+.delete{
+    padding:10px 14px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    margin-right:5px;
+    display:inline-block;
+    transition:.3s;
+}
+
+.edit{
+    background:#3498db;
+}
+
+.edit:hover{
+    transform:scale(1.1);
+}
+
+.delete{
+    background:#e74c3c;
+}
+
+.delete:hover{
+    transform:scale(1.1);
+}
+
+/* ==========================
+   DATATABLE SEARCH
+========================== */
+
+.dataTables_filter{
+    margin-bottom:20px;
+}
+
+.dataTables_filter label{
+    color:white !important;
+    font-weight:500;
+}
+
+.dataTables_filter input{
+    background:rgba(255,255,255,.15) !important;
+    border:1px solid rgba(255,255,255,.25) !important;
+
+    color:white !important;
+
+    border-radius:10px !important;
+
+    padding:10px 15px !important;
+
+    margin-left:10px !important;
+}
+
+.dataTables_filter input:focus{
+    outline:none;
+    border:1px solid #D4AF37 !important;
+}
+
+/* ==========================
+   SHOW ENTRIES
+========================== */
+
+.dataTables_length label{
+    color:white !important;
+}
+
+.dataTables_length select{
+    background:rgba(255,255,255,.15);
+    color:white;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:10px;
+    padding:8px 10px;
+}
+
+.dataTables_length select option{
+    color:black;
+}
+
+/* ==========================
+   INFO TEXT
+========================== */
+
+.dataTables_info{
+    color:white !important;
+    margin-top:15px;
+}
+
+/* ==========================
+   PAGINATION
+========================== */
+
+.dataTables_paginate{
+    margin-top:15px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    background:rgba(255,255,255,.15) !important;
+    border:none !important;
+
+    color:white !important;
+
+    border-radius:10px !important;
+
+    margin-left:5px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    background:#D4AF37 !important;
+    color:black !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+    background:#D4AF37 !important;
+    color:black !important;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1200px){
+
+    .sidebar{
+        width:250px;
+        min-width:250px;
+    }
+
+}
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+    }
+
+    .main-content{
+        padding:20px;
+    }
+
+    .glass-card{
+        overflow-x:auto;
+    }
+
+}
+
+.student_h1{
+    color:white;
+}
