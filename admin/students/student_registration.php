@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../phpqrcode/qrlib.php';
+require_once '../../phpqrcode/qrlib.php';
 
 if(!isset($_SESSION['admin_logged_in'])){
     header("Location: index.php");
@@ -197,8 +197,8 @@ content="width=device-width, initial-scale=1.0">
 
 <title>Student Registration</title>
 
-<link rel="stylesheet"
-href="../css/css/student_registration.css">
+ <link rel="stylesheet" href="../../assets/css/student_registration.css">
+
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -215,7 +215,7 @@ rel="stylesheet">
  <aside class="sidebar">
 
         <div class="logo">
-            <img class="logo-img" src="../pictures/PWU LOGO.png" width="70">
+            <img class="logo-img" src="../../pictures/PWU LOGO.png" width="70">
             <h2>PWU CDCEC</h2>
             <span>QR Attendance</span>
         </div>
@@ -223,7 +223,7 @@ rel="stylesheet">
         <ul class="menu">
 
             <li class="active">
-                <a href="dashboard.php">
+                <a href="../dashboard.php">
                     <i class="fa-solid fa-chart-line"></i>
                     Dashboard
                 </a>
@@ -235,14 +235,14 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="student_registration.php">
+                <a href="../students/student_registration.php">
                     <i class="fa-solid fa-user-plus"></i>
                     Student Registration
                 </a>
             </li>
 
             <li>
-                <a href="student_list.php">
+                <a href="../students/student_list.php">
                     <i class="fa-solid fa-users"></i>
                     Student List
                 </a>
@@ -254,14 +254,14 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="professor_registration.php">
+                <a href="../professors/professor_registration.php">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     Professor Registration
                 </a>
             </li>
 
             <li>
-                <a href="professor_list.php">
+                <a href="../professors/professor_list.php">
                     <i class="fa-solid fa-user-tie"></i>
                     Professor List
                 </a>

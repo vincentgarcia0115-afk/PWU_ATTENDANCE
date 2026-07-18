@@ -1,0 +1,1487 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+        url("../../pictures/wallpaper_login.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:#fff;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:290px;
+    min-height:100vh;
+
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border-right:1px solid rgba(255,255,255,.25);
+
+    padding:30px 20px;
+
+    flex-shrink:0;
+}
+
+.logo-section{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.logo-img{
+    width:90px;
+    height:90px;
+    background:#fff;
+    border-radius:50%;
+    margin-bottom:12px;
+}
+
+.logo-section h2{
+    font-size:24px;
+    font-weight:600;
+}
+
+.logo-section span{
+    font-size:14px;
+    color:rgba(255,255,255,.75);
+}
+
+.menu-title{
+    color:rgba(255,255,255,.65);
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin:25px 0 12px;
+    padding-left:10px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:8px;
+}
+
+.menu li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:14px 18px;
+
+    text-decoration:none;
+    color:#fff;
+
+    border-radius:15px;
+
+    transition:.3s ease;
+}
+
+.menu li a i{
+    width:20px;
+    text-align:center;
+}
+
+.menu li a:hover,
+.menu li.active a{
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    transform:translateX(5px);
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding:40px;
+    overflow-y:auto;
+}
+
+/* ================= GLASS CARD ================= */
+
+.glass-card{
+    width:100%;
+    max-width:1450px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    color:rgba(255,255,255,.75);
+    margin-bottom:30px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message{
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.success{
+    background:#00c853;
+}
+
+.error{
+    background:#e53935;
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.3);
+    border-radius:20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:1000px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+    }
+
+    .main-content{
+        padding:20px;
+    }
+
+    .glass-card{
+        padding:25px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:600px){
+
+    h1{
+        font-size:24px;
+    }
+
+    .glass-card{
+        border-radius:18px;
+        padding:20px;
+    }
+
+    button{
+        height:50px;
+    }
+}
+
+/* ==========================================
+   TWO PANEL LAYOUT
+========================================== */
+
+/* ==========================================
+   TWO PANEL
+========================================== */
+
+.form-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.panel{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+}
+
+.panel h2{
+    margin-bottom:20px;
+}
+
+@media(max-width:1100px){
+
+    .form-wrapper{
+        grid-template-columns:1fr;
+    }
+
+}
+
+.panel p{
+
+    color:rgba(255,255,255,.70);
+
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   LOCKED PANEL
+========================================== */
+
+.locked-card{
+
+    width:100%;
+    min-height:520px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px dashed rgba(255,255,255,.20);
+
+    color:white;
+}
+
+.locked-card i{
+
+    font-size:75px;
+
+    color:#D4AF37;
+
+    margin-bottom:25px;
+}
+
+.locked-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.locked-card p{
+
+    color:rgba(255,255,255,.70);
+
+    max-width:280px;
+
+    line-height:1.7;
+}
+
+/* ==========================================
+   SUBJECT CARD
+========================================== */
+
+.subject-card{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:18px;
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:500;
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    height:50px;
+
+    padding:0 15px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    border-color:#D4AF37;
+
+    background:rgba(255,255,255,.18);
+}
+
+.input-group input::placeholder{
+
+    color:rgba(255,255,255,.60);
+}
+
+.input-group select option{
+
+    color:black;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.submit-btn,
+#addSubjectBtn{
+
+    width:100%;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#7B1113;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin-top:20px;
+}
+
+.submit-btn:hover,
+#addSubjectBtn:hover{
+
+    background:#99161A;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.30);
+}
+
+/* ==========================================
+   PROFESSOR REGISTERED BADGE
+========================================== */
+
+.success-badge{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
+
+    background:#00c853;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+}
+
+.success-badge i{
+
+    font-size:20px;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .form-wrapper{
+
+        grid-template-columns:1fr;
+    }
+
+    .panel{
+
+        min-height:auto;
+    }
+}
+
+@media(max-width:768px){
+
+    .grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .main-content{
+
+        padding:20px;
+    }
+
+    .glass-card{
+
+        padding:20px;
+    }
+}
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:18px;
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-size:14px;
+
+    font-weight:500;
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 15px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    border-color:#D4AF37;
+
+    background:rgba(255,255,255,.18);
+}
+
+.input-group input::placeholder{
+
+    color:rgba(255,255,255,.6);
+}
+
+.input-group select option{
+
+    color:#000;
+}
+
+.locked-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    height:620px;
+
+    border-radius:18px;
+
+    border:2px dashed rgba(255,255,255,.20);
+
+    background:rgba(255,255,255,.05);
+}
+
+.locked-card i{
+
+    font-size:70px;
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+}
+
+.locked-card h3{
+
+    margin-bottom:15px;
+}
+
+.locked-card p{
+
+    color:rgba(255,255,255,.70);
+
+    width:280px;
+
+    line-height:1.6;
+}
+
+/* ==========================================
+   PROFESSOR REGISTERED SUCCESS CARD
+========================================== */
+
+.success-badge{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    width:100%;
+
+    padding:16px 20px;
+
+    margin-top:25px;
+    margin-bottom:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,200,83,.85),
+            rgba(0,150,70,.65)
+        );
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 10px 30px rgba(0,200,83,.25);
+
+    font-size:18px;
+    font-weight:600;
+
+    animation:successPop .5s ease;
+}
+
+
+.success-badge i{
+
+    font-size:25px;
+
+    color:white;
+
+}
+
+
+/* ==========================================
+   REGISTERED PROFESSOR INFORMATION
+========================================== */
+
+.registered-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+
+.info-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    transition:.3s ease;
+
+}
+
+
+.info-item:hover{
+
+    transform:translateY(-5px);
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+.info-item strong{
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:#D4AF37;
+
+}
+
+
+.info-item span{
+
+    font-size:16px;
+
+    font-weight:500;
+
+    color:white;
+
+    word-break:break-word;
+
+}
+
+
+
+/* ==========================================
+   QR CODE CARD
+========================================== */
+
+.qr-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.05)
+        );
+
+
+    backdrop-filter:blur(25px);
+
+
+    border-radius:25px;
+
+
+    border:1px solid rgba(255,255,255,.25);
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.25);
+
+
+    overflow:hidden;
+
+}
+
+
+
+.qr-card h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    margin-bottom:25px;
+
+
+    font-size:22px;
+
+}
+
+
+.qr-card h3 i{
+
+    color:#D4AF37;
+
+}
+
+
+
+/* QR IMAGE */
+
+.qr-image{
+
+
+    width:250px;
+
+    height:250px;
+
+
+    padding:15px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    object-fit:contain;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.35);
+
+
+    transition:.4s ease;
+
+}
+
+
+
+.qr-image:hover{
+
+
+    transform:scale(1.08);
+
+
+    box-shadow:
+
+        0 15px 40px rgba(212,175,55,.35);
+
+}
+
+
+
+.qr-card p{
+
+
+    margin-top:20px;
+
+
+    color:rgba(255,255,255,.75);
+
+
+    font-size:14px;
+
+
+}
+
+
+
+/* ==========================================
+   SUCCESS ANIMATION
+========================================== */
+
+
+@keyframes successPop{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px) scale(.95);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:700px){
+
+
+    .registered-info{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .qr-image{
+
+        width:200px;
+
+        height:200px;
+
+    }
+
+
+}
+
+/* ==========================================
+   PAGE LOAD ANIMATIONS
+========================================== */
+
+
+/* SIDEBAR ENTER */
+
+.sidebar{
+
+    animation:slideSidebar .8s ease forwards;
+
+}
+
+
+
+@keyframes slideSidebar{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+/* MAIN GLASS CARD */
+
+.glass-card{
+
+    animation:glassAppear .8s ease forwards;
+
+}
+
+
+
+@keyframes glassAppear{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+        filter:blur(10px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+
+
+
+/* PANELS ANIMATION */
+
+.panel{
+
+    animation:panelShow .8s ease forwards;
+
+}
+
+
+
+.panel:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+
+
+.panel:nth-child(2){
+
+    animation-delay:.35s;
+
+}
+
+
+
+@keyframes panelShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+/* LOGO FLOAT */
+
+.logo-img{
+
+    animation:logoFloat 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes logoFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
+
+
+
+
+
+/* MENU ITEM ANIMATION */
+
+.menu li{
+
+    animation:menuFade .6s ease forwards;
+
+    opacity:0;
+
+}
+
+
+
+.menu li:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+
+.menu li:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.menu li:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+
+.menu li:nth-child(4){
+
+    animation-delay:.4s;
+
+}
+
+
+.menu li:nth-child(5){
+
+    animation-delay:.5s;
+
+}
+
+
+
+@keyframes menuFade{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+
+
+
+/* INPUT ANIMATION */
+
+
+.input-group{
+
+    animation:inputShow .5s ease forwards;
+
+}
+
+
+
+@keyframes inputShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* SUCCESS BADGE IMPROVED */
+
+
+.success-badge{
+
+
+    animation:
+
+    successBounce .7s ease,
+
+    successGlow 2s infinite alternate;
+
+}
+
+
+
+@keyframes successBounce{
+
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.5);
+
+    }
+
+
+    70%{
+
+        transform:scale(1.05);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+
+@keyframes successGlow{
+
+
+    from{
+
+        box-shadow:
+
+        0 0 10px rgba(0,200,83,.3);
+
+    }
+
+
+    to{
+
+        box-shadow:
+
+        0 0 35px rgba(0,200,83,.7);
+
+    }
+
+}
+
+
+
+
+/* REGISTERED INFO CARDS */
+
+
+.info-item{
+
+
+    animation:
+
+    infoSlide .6s ease forwards;
+
+
+}
+
+
+
+.info-item:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+
+.info-item:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+
+.info-item:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+
+.info-item:nth-child(4){
+
+    animation-delay:.4s;
+
+}
+
+
+
+
+@keyframes infoSlide{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* QR CARD ANIMATION */
+
+
+.qr-card{
+
+
+    animation:qrAppear .8s ease forwards;
+
+}
+
+
+
+@keyframes qrAppear{
+
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.7) rotate(-5deg);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1) rotate(0);
+
+    }
+
+}
+
+
+
+
+
+/* QR IMAGE FLOAT EFFECT */
+
+
+.qr-image{
+
+
+    animation:
+
+    qrFloat 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes qrFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+
+
+
+/* BUTTON EFFECT */
+
+
+.submit-btn{
+
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.submit-btn::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+    left:-100%;
+
+
+    width:100%;
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.35),
+
+    transparent
+
+    );
+
+
+    transition:.5s;
+
+}
+
+
+
+.submit-btn:hover::before{
+
+
+    left:100%;
+
+}
+
+
+
+
+
+/* PAGE SMOOTH */
+
+body{
+
+    overflow-x:hidden;
+
+}
+

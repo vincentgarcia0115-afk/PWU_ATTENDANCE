@@ -37,7 +37,7 @@ $admin_name = $_SESSION['admin_username'];
 <title>PWU QR Attendance Admin Dashboard</title>
 
 <link rel="stylesheet" href="dashboard.css">
-<link rel="stylesheet" href="../css/css/dashboard.css">
+<link rel="stylesheet" href="../../assets/css/dashboard.css">
 
 
 <link rel="stylesheet"
@@ -63,7 +63,7 @@ rel="stylesheet">
         <ul class="menu">
 
             <li class="active">
-                <a href="dashboard.php">
+                <a href="../dashboard.php">
                     <i class="fa-solid fa-chart-line"></i>
                     Dashboard
                 </a>
@@ -82,7 +82,7 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="student_list.php">
+                <a href="../students/student_list.php">
                     <i class="fa-solid fa-users"></i>
                     Student List
                 </a>
@@ -94,14 +94,14 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="professor_registration.php">
+                <a href="../professors/professor_registration.php">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     Professor Registration
                 </a>
             </li>
 
             <li>
-                <a href="professor_list.php">
+                <a href="../professors/professor_list.php">
                     <i class="fa-solid fa-user-tie"></i>
                     Professor List
                 </a>
@@ -113,21 +113,21 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="cloud.php">
+                <a href="../cloud.php">
                     <i class="fa-solid fa-cloud"></i>
                     Cloud Integration
                 </a>
             </li>
 
             <li>
-                <a href="attendance.php">
+                <a href="../attendance.php">
                     <i class="fa-solid fa-qrcode"></i>
                     Attendance
                 </a>
             </li>
 
             <li>
-                <a href="courses.php">
+                <a href="../courses.php">
                     <i class="fa-solid fa-book-open"></i>
                     Course Management
                 </a>
@@ -141,14 +141,14 @@ rel="stylesheet">
             </li>
 
             <li>
-                <a href="spreadsheet.php">
+                <a href="../spreadsheet.php">
                     <i class="fa-solid fa-file-excel"></i>
                     Spreadsheet Import
                 </a>
             </li>
 
             <li>
-                <a href="logout.php">
+                <a href="../auth/logout.php">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     Logout
                 </a>

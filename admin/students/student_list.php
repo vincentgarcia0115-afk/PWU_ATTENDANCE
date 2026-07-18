@@ -1,5 +1,5 @@
 <?php
-require_once 'auth.php';
+require_once '../../auth/auth.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ if (!$result) {
           href="https://cdn.datatables.net/1.13.8/css/dataTables.dataTables.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/css/list.css">
+   <link rel="stylesheet" href="../../assets/css/list.css">
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -58,7 +58,7 @@ if (!$result) {
     <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="../JS/student_list.js" defer></script>
+    <script src="../../JS/student_list.js" defer></script>
 </head>
 
 <body>
@@ -71,7 +71,7 @@ if (!$result) {
     <aside class="sidebar">
 
         <div class="logo">
-            <img src="../../pictures/PWU LOGO.png" width="80" alt="PWU Logo">
+            <img class="logo-img" src="../../pictures/PWU LOGO.png" width="80" alt="PWU Logo">
             <h2>PWU CDCEC</h2>
             <span>QR Attendance</span>
         </div>
@@ -88,14 +88,14 @@ if (!$result) {
             <li class="menu-title">STUDENT MANAGEMENT</li>
 
             <li>
-                <a href="student_registration.php">
+                <a href="../students/student_registration.php">
                     <i class="fa-solid fa-user-plus"></i>
                     Student Registration
                 </a>
             </li>
 
             <li class="active">
-                <a href="student_list.php">
+                <a href="../students/student_list.php">
                     <i class="fa-solid fa-users"></i>
                     Student List
                 </a>
@@ -104,14 +104,14 @@ if (!$result) {
             <li class="menu-title">PROFESSOR MANAGEMENT</li>
 
             <li>
-                <a href="professor_registration.php">
+                <a href="../professors/professor_registration.php">
                     <i class="fa-solid fa-chalkboard-user"></i>
                     Professor Registration
                 </a>
             </li>
 
             <li>
-                <a href="professor_list.php">
+                <a href="../professors/professor_list.php">
                     <i class="fa-solid fa-user-tie"></i>
                     Professor List
                 </a>
